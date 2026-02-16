@@ -10,16 +10,12 @@ import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import ProgramFLiC from "@/pages/ProgramFLiC";
+import Gallery from "@/pages/Gallery";
+import Blog from "@/pages/Blog";
+import GetInvolved from "@/pages/GetInvolved";
+import Donate from "@/pages/Donate";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
-
-// Placeholder components for other pages to ensure routing works
-const Placeholder = ({ title }: { title: string }) => (
-  <div className="pt-32 pb-20 text-center container-custom">
-    <h1 className="text-4xl font-bold mb-4">{title}</h1>
-    <p className="text-gray-600">This page is under construction.</p>
-  </div>
-);
 
 function Router() {
   return (
@@ -36,15 +32,10 @@ function Router() {
           <Route path="/programs/ai">
             <Placeholder title="AI & Digital Skills" />
           </Route>
-          <Route path="/gallery">
-            <Placeholder title="Gallery" />
-          </Route>
-          <Route path="/blog">
-            <Placeholder title="News & Blog" />
-          </Route>
-          <Route path="/get-involved">
-            <Placeholder title="Get Involved" />
-          </Route>
+          <Route path="/gallery" component={Gallery} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/get-involved" component={GetInvolved} />
+          <Route path="/donate" component={Donate} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>

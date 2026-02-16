@@ -148,12 +148,18 @@ export default function Contact() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">Subject</label>
-                    <input 
+                    <label className="text-sm font-semibold text-gray-700">Subject / Category</label>
+                    <select 
                       {...form.register("subject")}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                      placeholder="How can we help?"
-                    />
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all bg-white"
+                    >
+                      <option value="">Select a category</option>
+                      <option value="Volunteer">Volunteer</option>
+                      <option value="Sponsor/Partner">Sponsor/Partner</option>
+                      <option value="Student">Student</option>
+                      <option value="Donor">Donor</option>
+                      <option value="Other">Other</option>
+                    </select>
                     {form.formState.errors.subject && (
                       <p className="text-red-500 text-xs">{form.formState.errors.subject.message}</p>
                     )}
