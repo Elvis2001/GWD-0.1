@@ -17,6 +17,14 @@ import Donate from "@/pages/Donate";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
+// Placeholder components for other pages to ensure routing works
+const Placeholder = ({ title }: { title: string }) => (
+  <div className="pt-32 pb-20 text-center container-custom">
+    <h1 className="text-4xl font-bold mb-4">{title}</h1>
+    <p className="text-gray-600">This page is under construction.</p>
+  </div>
+);
+
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
