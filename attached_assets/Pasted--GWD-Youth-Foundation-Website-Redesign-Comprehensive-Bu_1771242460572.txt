@@ -1,0 +1,776 @@
+# GWD Youth Foundation Website Redesign - Comprehensive Build Prompt
+
+## Project Overview
+Redesign the **Grow With Data Youth Foundation (GWDYF)** website (gwd.com.ng) with modern, engaging design while maintaining the organization's mission, branding, and content integrity. The redesign should be visually stunning, highly interactive, and user-friendly.
+
+---
+
+## Organization Background
+
+### About GWDYF
+**Grow With Data Youth Foundation (GWDYF)** is a Nigerian non-profit organization dedicated to empowering young Nigerians through financial literacy, leadership development, and entrepreneurship training.
+
+**Mission:** To provide exciting and unique opportunities for children and young adults' learning and community building, bringing together youths from diverse backgrounds under the common objective of learning financial and money skills while having fun.
+
+**Founded by:** Nnenna Mosugu (Executive Director & Founder)
+
+**Core Focus Areas:**
+- Financial Literacy
+- Leadership Development
+- Entrepreneurship
+- Youth Empowerment
+
+**Target Audience:**
+- Secondary school students
+- Higher institution students (via HUBs)
+- Unemployed youths
+- Young Nigerians seeking financial knowledge
+
+**Location:** Suite 2/1, 2nd Floor, G.I. Mega Plaza, #40/42 Lamido Ahmadu Road Off Lamido Zubairu Way, Opposite Federal Medical Center (FMC) Yola Bye-pass, Yola 640001, Nigeria
+
+**Contact:** +234 8035867458
+
+---
+
+## Current Website Structure
+
+### Navigation Menu
+1. **Home**
+2. **GET INVOLVED**
+3. **Who We Are** (Dropdown)
+   - About GWDYF
+   - Financial Literacy Clubs (FLiC)
+   - **[NEW]** HUBs (Higher Institution Programs)
+4. **Gallery**
+5. **Blog**
+6. **Contact Us**
+7. **DONATE** (Call-to-action button)
+
+### Key Pages Content
+
+#### Home Page
+- Hero section with tagline about Financial Literacy Clubs
+- Founder spotlight (Nnenna Mosugu - Executive Director)
+- Three core pillars display:
+  - FINANCIAL Literacy
+  - Leadership
+  - Entrepreneurship
+- Tagline: "Propelling young Nigerians to a bright future!"
+- Recent blog posts section
+- Financial Literacy Curriculum overview
+- Media/video section
+- Footer with social links (@gwdfoundation)
+
+#### Financial Literacy Curriculum (Featured on Homepage)
+Students will learn to:
+
+1. **Understand the value of a college education**
+   - Career planning and earnings potential
+   - The importance of graduating
+
+2. **Make and follow a personal budget**
+   - Track personal income and expenses
+   - Understanding budgeting rules of thumb
+
+3. **Understand loans and credit**
+   - Basic terms and disclosure rules
+   - Responsible vs. Excessive borrowing
+   - Loan amortization
+   - Good and bad loans
+   - Assets and Liabilities
+
+4. **Understand the role of finances in the context of setting life goals**
+
+5. **Make first steps into employment after graduation**
+   - Self-employment
+   - Entrepreneurship
+   - Evaluating job offers
+   - Student loan repayment
+
+6. **Understand banking basics**
+   - Checking and saving accounts
+   - Debit cards
+   - Interest and other banking terms
+
+7. **Understand and purchase insurance**
+   - Auto, renters, health, home, and life insurance
+
+8. **Know how to plan for the future**
+   - Establishing an emergency fund
+   - Plan for major expenditures
+   - Rationally make big financial decisions
+   - Investment terms and instruments, including retirement
+
+9. **Make plans for charitable giving**
+
+10. **Take personal responsibility** and have a sense of personal agency for one's financial situation
+
+#### Recent Blog Posts/News (Sample Headlines)
+- "GWDYF in partnership with North-East Humanitarian Innovation Hub facilitates Social Innovation Entrepreneurship Bootcamp"
+- "GWDYF partners with ACT Foundation and Sunlight to train 50 Youths on Technology and Entrepreneurial Skills"
+- "GWDYF partners with Mentors International to train 21st-Century Ladies on Technology"
+
+#### Programs Overview
+1. **Financial Literacy Clubs (FLiC)** - For Secondary Schools
+2. **[NEW] HUBs** - For Higher Institutions (similar to FLiC structure)
+3. **[NEW] AI & Prompt Engineering Program** - New tech-focused initiative
+
+---
+
+## Brand Identity
+
+### Primary Colors (Extract from Current Site)
+Based on the current GWD website, use these color guidelines:
+- **Primary Green:** Use the green from the logo and branding elements
+- **Accent Colors:** Complementary warm tones (oranges/yellows) as seen in current design
+- **Neutral Base:** Whites, light grays for backgrounds
+- **Dark Mode:** Deep charcoals/blacks with color accents maintained
+
+### Logo
+- Preserve the existing GWD logo design
+- Logo text: "Grow With Data Youth Foundation"
+- Use logo consistently across all pages
+
+### Typography
+- **Headings:** Bold, modern sans-serif fonts (Consider: Montserrat, Poppins, Inter, or similar)
+- **Body Text:** Clean, readable sans-serif (Consider: Open Sans, Roboto, or similar)
+- **Emphasis on BOLD typography** for impact sections
+
+---
+
+## Design Requirements
+
+### Visual Design Principles
+
+1. **Modern & Clean Aesthetic**
+   - Spacious layouts with ample whitespace
+   - Card-based design for content sections
+   - Smooth rounded corners on elements
+   - Subtle shadows for depth
+
+2. **Animation & Interactivity**
+   - **Ken Burns effect** on hero images and gallery photos
+   - **Hover effects** on all interactive elements:
+     - Cards that lift/scale on hover
+     - Button transformations
+     - Image overlays with information reveal
+   - **Framer Motion animations:**
+     - Scroll-triggered animations
+     - Staggered entrance animations for content blocks
+     - Smooth page transitions
+     - Parallax effects on hero sections
+   - Smooth scroll behavior throughout
+
+3. **Color Theme Implementation**
+   - **Light Mode:** Clean, bright, with primary green accents
+   - **Dark Mode:** Deep backgrounds with vibrant color accents
+   - **Theme Toggle:** Smooth transition between themes
+   - Position toggle in top-right of navigation bar
+   - Animated sun/moon icon for theme switcher
+
+4. **Typography Hierarchy**
+   - **Hero Headlines:** Extra large, bold, attention-grabbing (60-80px)
+   - **Section Headers:** Large, bold (36-48px)
+   - **Subheadings:** Medium bold (24-32px)
+   - **Body Text:** Comfortable reading size (16-18px)
+   - **Use color overlays** on text over images for readability
+
+5. **Responsive Design**
+   - Mobile-first approach
+   - Breakpoints: Mobile (< 768px), Tablet (768px-1024px), Desktop (> 1024px)
+   - Touch-friendly interface elements on mobile
+   - Hamburger menu for mobile navigation
+
+---
+
+## Page-by-Page Specifications
+
+### 1. Home Page
+
+**Hero Section:**
+- Full-viewport height background with Ken Burns effect
+- Overlay with gradient for text readability
+- Prominent headline: "Our Financial Literacy Clubs teach youths to make smarter financial decisions early, using various fun activities, games and online tools"
+- Founder spotlight card (Nnenna Mosugu - Executive Director, Founder GWD)
+- CTA buttons: "Learn More About FLiC" | "Get Involved"
+
+**Three Pillars Section:**
+- Large, animated cards for each pillar:
+  - FINANCIAL Literacy
+  - Leadership
+  - Entrepreneurship
+- Hover effects revealing more details
+- Icon or graphic for each pillar
+
+**Mission Statement:**
+- Centered, bold text: "Propelling young Nigerians to a bright future!"
+- Accompanying imagery of Nigerian youth
+
+**Recent Posts/News:**
+- Grid layout (3 columns on desktop, 1 on mobile)
+- Featured image thumbnails with Ken Burns effect
+- Excerpt text
+- "Read More" links
+- "ALL STORIES" button linking to blog
+
+**Financial Literacy Curriculum Section:**
+- Accordion or tabbed interface for the 10 curriculum points
+- Icons for each curriculum item
+- Expandable sections with detailed information
+- "Learn more about FLiC" CTA
+
+**Media/Videos Section:**
+- Embedded video player or video grid
+- Link to YouTube channel: @gwdfoundation
+- "ALL VIDEOS" button
+
+**Impact Statistics (NEW - Recommended Addition):**
+- Animated counters showing:
+  - Number of students reached
+  - Number of schools/institutions
+  - Number of programs run
+  - Years of operation
+
+### 2. About GWDYF Page
+
+**Organization Overview:**
+- Mission and vision statements
+- History and founding story
+- Nnenna Mosugu biography and photo
+- Core values and principles
+
+**What We Do:**
+- Detailed program descriptions
+- Impact stories and testimonials
+- Partnership highlights
+
+**Team Section:**
+- Leadership team profiles
+- Staff members (if applicable)
+- Advisors/Board members
+
+### 3. Financial Literacy Clubs (FLiC) Page
+
+**Program Overview:**
+- Detailed explanation of FLiC model
+- Target audience: Secondary school students
+- Program structure and activities
+
+**Curriculum Deep Dive:**
+- Expanded version of the 10 curriculum points from homepage
+- Learning outcomes
+- Teaching methodology (games, activities, online tools)
+
+**How to Start a FLiC:**
+- Step-by-step guide for schools
+- Requirements and resources needed
+- Contact form for interested schools
+
+**Success Stories:**
+- Testimonials from students
+- School participation showcase
+- Photo gallery of FLiC activities
+
+### 4. HUBs Page (NEW)
+
+**Program Overview:**
+- Explanation of HUBs for higher institutions
+- How it differs from and complements FLiC
+- Target audience: University/Polytechnic students
+
+**Program Structure:**
+- Campus-based financial literacy initiatives
+- Leadership development workshops
+- Entrepreneurship training
+- Networking opportunities
+
+**How to Establish a HUB:**
+- Requirements for higher institutions
+- Application process
+- Support provided by GWDYF
+
+**Active HUBs:**
+- List of participating institutions
+- Hub leader profiles
+- Success metrics
+
+### 5. AI & Prompt Engineering Page (NEW)
+
+**Program Overview:**
+- Introduction to AI literacy for Nigerian youth
+- Importance of prompt engineering skills
+- How it integrates with financial literacy
+
+**Curriculum:**
+- AI fundamentals
+- Prompt engineering techniques
+- Practical applications for entrepreneurship
+- Ethical AI usage
+
+**Training Opportunities:**
+- Workshop schedules
+- Online resources
+- Certification programs
+
+**Career Pathways:**
+- AI-related career opportunities
+- Success stories from program participants
+
+### 6. Get Involved Page
+
+**Ways to Participate:**
+- Volunteer opportunities
+- Become a mentor
+- Partner organization application
+- Start a FLiC or HUB at your school/institution
+- Donate
+
+**Volunteer Form:**
+- Contact information fields
+- Areas of interest checkboxes
+- Skills/expertise
+- Availability
+
+**Partnership Opportunities:**
+- Corporate partnerships
+- NGO collaborations
+- Government partnerships
+- Academic institution partnerships
+
+**Donation Section:**
+- Impact of donations
+- Donation tiers/levels
+- Direct link to donation portal: https://dashboard.flutterwave.com/donate/3foid5tzjh7r
+- Recurring donation options
+
+### 7. Gallery Page
+
+**Photo Gallery:**
+- Masonry grid layout
+- Categories/filters: Events, FLiC Activities, HUBs, Training Programs, Partnerships
+- Lightbox functionality with Ken Burns effect
+- Caption overlays on hover
+- Download/share options
+
+**Video Gallery:**
+- Grid of video thumbnails
+- Play overlay on hover
+- Embedded player or YouTube integration
+
+### 8. Blog Page
+
+**Blog Grid:**
+- Featured post at top
+- Grid layout for recent posts (3 columns)
+- Filters: All, Programs, Partnerships, Impact Stories, Events
+- Search functionality
+- Pagination
+
+**Blog Post Template:**
+- Featured image with Ken Burns effect
+- Author and date
+- Social sharing buttons
+- Related posts section
+- Comments section (optional)
+
+### 9. Contact Us Page
+
+**Contact Form:**
+- Name, Email, Phone Number fields
+- Subject dropdown
+- Message textarea
+- Submit button with loading animation
+
+**Contact Information:**
+- Physical address
+- Phone number: +234 8035867458
+- Email address
+- Business hours
+
+**Map Integration:**
+- Google Maps embed showing office location in Yola
+
+**Social Media Links:**
+- Instagram: @gwdfoundation
+- YouTube
+- Twitter/X: @data_grow
+- LinkedIn
+- Other platforms
+
+---
+
+## Technical Specifications
+
+### Technology Stack Recommendations
+
+**Frontend:**
+- **React.js** or **Next.js** (for better SEO and performance)
+- **Framer Motion** for animations
+- **Tailwind CSS** for styling
+- **TypeScript** (optional but recommended)
+
+**Additional Libraries:**
+- `react-intersection-observer` for scroll animations
+- `react-icons` for icon library
+- `swiper` or `react-slick` for carousels
+- `react-player` for video embeds
+- `next-themes` or custom implementation for dark mode
+
+**Performance:**
+- Image optimization (Next.js Image component or similar)
+- Lazy loading for images and components
+- Code splitting
+- Minification and compression
+
+**Accessibility:**
+- WCAG 2.1 Level AA compliance
+- Keyboard navigation support
+- Screen reader compatibility
+- Alt text for all images
+- Proper heading hierarchy
+- Color contrast ratios meeting standards
+
+**SEO:**
+- Meta tags optimization
+- Open Graph tags for social sharing
+- Structured data markup
+- XML sitemap
+- Mobile-friendly design
+- Fast loading times
+
+---
+
+## Component Specifications
+
+### Navigation Bar
+- **Desktop:**
+  - Logo on left
+  - Menu items centered or right-aligned
+  - "DONATE" button (prominent, green background)
+  - Dark/Light theme toggle on far right
+  - Transparent on scroll-top, solid background on scroll
+  
+- **Mobile:**
+  - Hamburger menu
+  - Slide-in or overlay menu
+  - Logo centered or left
+  - Close button (X)
+
+### Footer
+- **Three-column layout (Desktop):**
+  - Column 1: About snippet, logo
+  - Column 2: Quick links
+  - Column 3: Contact info and social media
+  
+- **Mobile:** Stacked layout
+  
+- **Bottom bar:**
+  - Copyright: "© 2026. Grow With Data Youth Foundation All Rights Reserved."
+  - Privacy Policy | Terms of Service links (if applicable)
+
+### Buttons
+- Primary: Green background, white text, hover scale/shadow
+- Secondary: Outlined, hover fill
+- CTA: Larger, more prominent, animated
+
+### Cards
+- Clean borders or subtle shadows
+- Hover: Lift effect (translateY + shadow)
+- Image + Title + Excerpt + CTA structure
+- Smooth transitions
+
+### Forms
+- Floating labels or clear placeholders
+- Validation feedback (real-time)
+- Success/error states
+- Accessible form controls
+
+### Dark Mode Toggle
+- Sun/moon icon
+- Smooth transition animation (0.3s)
+- Position: Top-right of navbar
+- Persists user preference (localStorage)
+
+---
+
+## Animation Details
+
+### Ken Burns Effect
+- Apply to:
+  - Hero section backgrounds
+  - Gallery images
+  - Blog post featured images
+  - Testimonial backgrounds
+- Subtle zoom (1.0 to 1.1 scale) over 10-15 seconds
+- Infinite loop or pause on hover
+
+### Hover Effects
+- **Cards:** Scale(1.05) + shadow increase
+- **Buttons:** Background color shift + slight scale
+- **Images:** Zoom + overlay opacity change
+- **Links:** Color change + underline animation
+- **Navigation items:** Underline slide-in or color fade
+
+### Framer Motion Animations
+- **Scroll Animations:**
+  - Fade in from bottom (stagger for lists)
+  - Slide in from left/right
+  - Scale up from 0.8 to 1
+  
+- **Page Transitions:**
+  - Fade in/out
+  - Slide transitions
+  
+- **Stagger Effects:**
+  - Blog post cards
+  - Gallery items
+  - Curriculum items
+  - Team members
+  
+- **Parallax:**
+  - Background images scroll slower than content
+  - Hero section elements at different speeds
+
+### Loading States
+- Skeleton screens for content loading
+- Spinner or progress indicators
+- Smooth content reveal
+
+---
+
+## Content Guidelines
+
+### Writing Tone
+- Inspirational and empowering
+- Professional yet approachable
+- Youth-friendly language
+- Action-oriented
+
+### Imagery
+- High-quality photos of Nigerian youth
+- Diverse representation
+- Action shots from programs
+- Professional event photography
+- Infographics for data/statistics
+
+### Calls-to-Action
+- "Get Involved"
+- "Learn More"
+- "Donate Now"
+- "Start a FLiC/HUB"
+- "Join Our Team"
+- "Read More"
+- "Watch Video"
+
+---
+
+## Additional Features
+
+### Newsletter Signup
+- Pop-up or inline form
+- Email collection
+- "Stay updated on our programs" messaging
+- Integration with email service (Mailchimp, SendGrid, etc.)
+
+### Search Functionality
+- Global search for blog posts and pages
+- Search bar in navigation or dedicated search page
+
+### Social Media Feed
+- Instagram feed widget on homepage
+- Live updates from @gwdfoundation
+
+### Testimonials Section
+- Rotating testimonials on homepage
+- Student, teacher, and partner testimonials
+- Photo + Quote + Name/School format
+
+### Impact Counter
+- Animated numbers showing impact metrics
+- Updates based on actual data
+- Positioned prominently on homepage
+
+### Event Calendar (Optional)
+- Upcoming events and workshops
+- Registration functionality
+- Calendar view and list view
+
+---
+
+## Mobile Optimization
+
+### Mobile-Specific Considerations
+- Touch targets minimum 44x44px
+- Simplified navigation (hamburger menu)
+- Optimized images for mobile bandwidth
+- Swipeable galleries
+- Tap-friendly buttons and links
+- Reduced animation intensity (performance)
+
+---
+
+## Performance Targets
+- **Lighthouse Score:** 90+ across all metrics
+- **First Contentful Paint:** < 1.5s
+- **Time to Interactive:** < 3s
+- **Core Web Vitals:** Pass all metrics
+
+---
+
+## Deliverables Checklist
+
+- [ ] Fully responsive website (mobile, tablet, desktop)
+- [ ] Dark/Light theme toggle with smooth transitions
+- [ ] Ken Burns effects on images
+- [ ] Comprehensive hover effects on all interactive elements
+- [ ] Framer Motion animations throughout
+- [ ] All current pages redesigned
+- [ ] New HUBs page created
+- [ ] New AI & Prompt Engineering page created
+- [ ] Updated navigation with new items
+- [ ] Functional contact forms
+- [ ] Integrated donation link
+- [ ] Social media integration
+- [ ] Blog functionality
+- [ ] Gallery with lightbox
+- [ ] SEO optimization
+- [ ] Accessibility compliance
+- [ ] Performance optimization
+- [ ] Cross-browser compatibility
+
+---
+
+## Testing Requirements
+
+### Browser Compatibility
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+### Device Testing
+- Desktop (1920x1080, 1366x768)
+- Laptop (1440x900)
+- Tablet (iPad, 768x1024)
+- Mobile (iPhone 12/13/14, various Android devices)
+
+### Functional Testing
+- All links working correctly
+- Forms submitting properly
+- Navigation functioning
+- Theme toggle working
+- Animations performing smoothly
+- Media loading correctly
+
+---
+
+## Maintenance Considerations
+
+### Content Management
+- Easy content updates (consider headless CMS like Contentful, Sanity, or Strapi)
+- Blog post creation and editing
+- Image uploads and management
+- Team member profiles management
+
+### Analytics Integration
+- Google Analytics or alternative
+- Event tracking for key interactions
+- Donation button clicks tracking
+- Form submission tracking
+
+---
+
+## Future Enhancements (Phase 2)
+- Multi-language support (Hausa, Yoruba, Igbo)
+- Student/Member portal with login
+- Online learning modules
+- Certificate generation for program completion
+- Live chat support
+- Interactive financial literacy tools/calculators
+- Mobile app companion
+
+---
+
+## Color Palette Specifications
+
+Based on the current GWD branding, implement the following color scheme:
+
+### Light Mode
+- **Primary Green:** #[Extract from logo - appears to be a teal/green]
+- **Secondary/Accent:** Warm orange/yellow tones
+- **Background:** #FFFFFF, #F8F9FA
+- **Text:** #212529 (dark gray/black)
+- **Borders:** #DEE2E6
+
+### Dark Mode
+- **Primary Green:** Slightly brighter version of light mode green
+- **Secondary/Accent:** Same warm tones, possibly more saturated
+- **Background:** #1A1A1A, #2D2D2D
+- **Text:** #F8F9FA (off-white)
+- **Borders:** #404040
+
+---
+
+## Implementation Notes
+
+1. **Start with the homepage** to establish design patterns
+2. **Create a component library** for consistent UI elements
+3. **Implement dark mode early** in the development process
+4. **Test animations on lower-end devices** to ensure smooth performance
+5. **Optimize images** before implementation (WebP format recommended)
+6. **Use semantic HTML** for better SEO and accessibility
+7. **Implement proper meta tags** for social sharing
+8. **Test on real devices** not just browser dev tools
+9. **Consider progressive enhancement** for older browsers
+10. **Document code** for easier maintenance
+
+---
+
+## Design Inspiration References
+
+**Style Direction:**
+- Modern NGO websites with youth focus
+- Clean, minimalist design with bold typography
+- Interactive elements that engage without overwhelming
+- Professional yet energetic and youthful
+- Color blocking for visual interest
+- Large, impactful imagery
+
+**Animation Style:**
+- Subtle, purposeful animations
+- Not overly flashy or distracting
+- Smooth, professional transitions
+- Enhance UX without hindering performance
+
+---
+
+## Final Notes
+
+This redesign should transform gwd.com.ng into a modern, engaging, and highly functional platform that:
+- Clearly communicates GWDYF's mission and impact
+- Makes it easy for schools and institutions to get involved
+- Encourages donations and support
+- Showcases the organization's work through compelling visuals
+- Provides excellent user experience across all devices
+- Stands out as a professional, forward-thinking youth organization
+
+**Remember:** The goal is to create a website that not only looks beautiful but also effectively serves the organization's mission of empowering young Nigerians through financial literacy, leadership, and entrepreneurship education.
+
+---
+
+## Success Metrics
+
+Post-launch, measure success through:
+- Increased page views and session duration
+- Higher donation conversion rate
+- More school/institution partnership inquiries
+- Improved bounce rate
+- Better mobile engagement metrics
+- Higher blog readership
+- Increased social media follows from website
+- Positive user feedback
+
+---
+
+**Build a website that makes every young Nigerian visitor feel empowered, inspired, and eager to join the Grow With Data Youth Foundation movement!**
