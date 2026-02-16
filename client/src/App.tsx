@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import ProgramFLiC from "@/pages/ProgramFLiC";
+import ProgramAI from "@/pages/ProgramAI";
 import Gallery from "@/pages/Gallery";
 import Blog from "@/pages/Blog";
 import GetInvolved from "@/pages/GetInvolved";
@@ -37,9 +38,7 @@ function Router() {
           <Route path="/programs/hubs">
             <Placeholder title="HUBs Initiative" />
           </Route>
-          <Route path="/programs/ai">
-            <Placeholder title="AI & Digital Skills" />
-          </Route>
+          <Route path="/programs/ai" component={ProgramAI} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/blog" component={Blog} />
           <Route path="/get-involved" component={GetInvolved} />
