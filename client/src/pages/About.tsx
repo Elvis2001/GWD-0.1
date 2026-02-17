@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useTeam } from "@/hooks/use-content";
-import { CheckCircle2, Target, Lightbulb, Heart } from "lucide-react";
+import { CheckCircle2, Target, Lightbulb, Heart, Users, Landmark, Clock, Globe, Trophy, MapPin } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function About() {
   const { data: team } = useTeam();
@@ -100,26 +101,73 @@ export default function About() {
           </div>
         </div>
 
-        {/* Core Values */}
+        {/* Timeline of Achievements */}
         <div className="mb-24">
-          <SectionHeader title="Our Core Values" subtitle="What Guides Us" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((val, i) => (
+          <SectionHeader title="Our Journey" subtitle="Timeline" description="Key milestones and achievements in our mission to empower Nigerian youth." />
+          <div className="relative max-w-4xl mx-auto pl-8 md:pl-0">
+            {/* Vertical Line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2" />
+            
+            {[
+              { year: "Launch", title: "Foundation Establishment", desc: "Founded by Nnenna Mosugu with a vision for youth empowerment." },
+              { year: "2020", title: "First FLiC Club", desc: "Launch of our signature Financial Literacy Club model in secondary schools." },
+              { year: "2021", title: "ACT & Sunlight Partnership", desc: "Trained 50 youths in tech and entrepreneurship across Adamawa State." },
+              { year: "2022", title: "NE Innovation Hub Partnership", desc: "31 IDPs trained in Social Innovation Entrepreneurship." },
+              { year: "2023", title: "Mentors International Partnership", desc: "23 young women trained in advanced technology programs." },
+              { year: "2024", title: "National Expansion", desc: "Expansion to 50+ schools, reaching 10,000+ students nationwide." }
+            ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors"
+                className={cn(
+                  "relative mb-12 flex flex-col md:flex-row items-center",
+                  i % 2 === 0 ? "md:flex-row-reverse" : ""
+                )}
               >
-                <div className="w-16 h-16 mx-auto bg-white shadow-md rounded-full flex items-center justify-center mb-6">
-                  {val.icon}
+                {/* Dot */}
+                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 z-10 border-4 border-white shadow-sm" />
+                
+                <div className="md:w-1/2 p-4">
+                  <div className={cn(
+                    "bg-white p-6 rounded-2xl shadow-md border border-gray-100",
+                    i % 2 === 0 ? "md:text-right" : "md:text-left"
+                  )}>
+                    <span className="text-primary font-bold text-sm">{item.year}</span>
+                    <h4 className="text-xl font-bold mt-1 mb-2">{item.title}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold mb-3">{val.title}</h4>
-                <p className="text-muted-foreground text-sm">{val.description}</p>
+                <div className="md:w-1/2 hidden md:block" />
               </motion.div>
             ))}
+          </div>
+        </div>
+
+        {/* Impact Statistics Dashboard */}
+        <div className="mb-24 bg-gray-900 rounded-[3rem] p-12 lg:p-20 text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]" />
+          <div className="relative z-10">
+            <SectionHeader title="Our Measurable Impact" subtitle="Dashboard" light centered className="mb-16" />
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+              {[
+                { label: "Students Reached", value: "10,000+", icon: <Users className="w-6 h-6" /> },
+                { label: "Schools & Institutions", value: "50+", icon: <Landmark className="w-6 h-6" /> },
+                { label: "Training Hours", value: "25,000+", icon: <Clock className="w-6 h-6" /> },
+                { label: "Partner Organizations", value: "15+", icon: <Globe className="w-6 h-6" /> },
+                { label: "Active Yola Locations", value: "6", icon: <MapPin className="w-6 h-6" /> },
+                { label: "State Reach", value: "Multiple", icon: <Trophy className="w-6 h-6" /> }
+              ].map((stat, i) => (
+                <div key={i} className="text-center">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 text-primary">
+                    {stat.icon}
+                  </div>
+                  <h4 className="text-3xl md:text-4xl font-bold mb-1">{stat.value}</h4>
+                  <p className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

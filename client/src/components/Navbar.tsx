@@ -37,7 +37,7 @@ export function Navbar() {
         "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
+          : "bg-black/20 backdrop-blur-[2px] py-5"
       )}
     >
       <div className="container-custom flex items-center justify-between">

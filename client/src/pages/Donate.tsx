@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Heart, ShieldCheck, Globe } from "lucide-react";
+import { Heart, ShieldCheck, Globe, CheckCircle2, Check, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Donate() {
   const tiers = [
@@ -30,66 +31,73 @@ export default function Donate() {
           description="Your financial contribution directly empowers young Nigerians with life-changing skills."
         />
 
-        <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
-          <div>
-            <h2 className="text-3xl font-bold mb-8">Secure Your Impact</h2>
+        {/* Financial Transparency Section */}
+        <section className="mb-20 bg-gray-50 rounded-[3rem] p-12 lg:p-20">
+          <SectionHeader 
+            title="Our Commitment to Trust" 
+            subtitle="Financial Transparency" 
+            description="We maintain the highest standards of accountability in managing donor funds."
+          />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-2">Secure Payments</h3>
-                  <p className="text-gray-600">All donations are processed securely via our payment partners.</p>
+              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+                  <CheckCircle2 className="w-6 h-6 text-primary" />
+                  Transparency Promise
+                </h3>
+                <p className="text-gray-600 mb-6 text-lg">
+                  <span className="font-bold text-gray-900">100% of public donations</span> go directly to funding our youth programs and educational resources.
+                </p>
+                <div className="space-y-4">
+                  {[
+                    "Registered NGO Status",
+                    "Annual Audit Reports",
+                    "Tax-Deductible Contributions",
+                    "Impact Measurement & Verification"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-primary">
+                        <Check className="w-3 h-3" />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-700">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="flex gap-6">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-                  <Globe className="w-6 h-6" />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="outline" className="rounded-full gap-2">
+                  <Download className="w-4 h-4" /> 2023 Annual Report
+                </Button>
+                <Button variant="outline" className="rounded-full gap-2">
+                  <Download className="w-4 h-4" /> Tax Info (PDF)
+                </Button>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <h3 className="text-xl font-bold mb-6 text-center">Where Your Money Goes</h3>
+              <div className="aspect-square max-w-[400px] mx-auto relative flex items-center justify-center">
+                {/* Visual Representation of Spending */}
+                <div className="w-full h-full rounded-full border-[20px] border-primary" />
+                <div className="absolute inset-0 w-full h-full rounded-full border-[20px] border-secondary border-t-transparent border-r-transparent border-b-transparent rotate-[30deg]" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                  <p className="text-4xl font-bold text-gray-900">90%</p>
+                  <p className="text-sm text-gray-500 font-medium">Program Services</p>
                 </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-2">Direct Impact</h3>
-                  <p className="text-gray-600">90% of your donation goes directly toward student programs.</p>
+              </div>
+              <div className="mt-8 flex justify-center gap-8">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-primary rounded-full" />
+                  <span className="text-xs font-bold text-gray-600">Programs (90%)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-secondary rounded-full" />
+                  <span className="text-xs font-bold text-gray-600">Admin (10%)</span>
                 </div>
               </div>
             </div>
-
-            <div className="mt-12 p-8 bg-gray-50 rounded-2xl border border-dashed border-gray-300 text-center">
-              <p className="text-gray-600 mb-6">Or donate via Flutterwave</p>
-              <a 
-                href="https://dashboard.flutterwave.com/donate/3foid5tzjh7r" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center gap-2"
-              >
-                Donate via Flutterwave <Heart className="w-4 h-4 fill-white" />
-              </a>
-            </div>
           </div>
-
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">Suggested Amounts</h3>
-            {tiers.map((tier, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-6 bg-white rounded-2xl shadow-md border border-gray-100 hover:border-primary transition-all group cursor-pointer"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-2xl font-extrabold text-primary">{tier.amount}</span>
-                  <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-                <p className="font-bold mb-1">{tier.description}</p>
-                <p className="text-sm text-gray-500">{tier.impact}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );

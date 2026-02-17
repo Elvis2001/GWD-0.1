@@ -68,31 +68,33 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Floating Stats Card */}
+        {/* Impact Statistics Dashboard (Floating) */}
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
           className="hidden lg:block absolute bottom-12 right-12 z-20"
         >
-          <div className="glass-card p-8 rounded-2xl max-w-xs">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                <Users className="w-6 h-6" />
+          <div className="glass-card p-8 rounded-2xl max-w-xs border border-white/20 bg-white/10 backdrop-blur-xl">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary-foreground">
+                  <Users className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white">10,000+</p>
+                  <p className="text-xs text-gray-300 uppercase tracking-wider">Students Reached</p>
+                </div>
               </div>
-              <div>
-                <p className="text-3xl font-bold text-gray-900">5,000+</p>
-                <p className="text-sm text-gray-600">Lives Impacted</p>
-              </div>
-            </div>
-            <div className="h-px bg-gray-200 mb-6" />
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                <Globe className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-gray-900">12+</p>
-                <p className="text-sm text-gray-600">Communities</p>
+              <div className="h-px bg-white/10" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                  <Globe className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white">50+</p>
+                  <p className="text-xs text-gray-300 uppercase tracking-wider">Partner Schools</p>
+                </div>
               </div>
             </div>
           </div>
