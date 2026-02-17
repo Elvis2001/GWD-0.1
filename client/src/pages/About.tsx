@@ -32,19 +32,39 @@ export default function About() {
 
   return (
     <div className="pt-24 pb-16">
-      {/* Header */}
-      <div className="bg-gray-50 py-16 mb-16">
-        <div className="container-custom">
-          <SectionHeader 
-            title="Who We Are" 
-            subtitle="About GWDYF"
-            description="Founded with a vision to bridge the gap between education and opportunity, the GWD Youth Foundation has grown into a beacon of hope for thousands of young people."
-            className="mb-0"
+      {/* Hero Section with Ken Burns Effect */}
+      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/60 z-10" />
+          <motion.img 
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.2 }}
+            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop"
+            alt="Nigerian Students in School"
+            className="w-full h-full object-cover"
           />
         </div>
-      </div>
+        <div className="container-custom relative z-20 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-extrabold text-white mb-6"
+          >
+            Who We Are
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-gray-200 max-w-2xl mx-auto"
+          >
+            Empowering the next generation of Nigerian leaders through financial literacy and digital excellence.
+          </motion.p>
+        </div>
+      </section>
 
-      <div className="container-custom">
+      <div className="container-custom py-24">
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-12 mb-24">
           <motion.div 

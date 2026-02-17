@@ -58,10 +58,10 @@ export default function Home() {
               transition={{ delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/programs/flic" className="btn-primary text-lg px-8 py-4 bg-primary hover:bg-primary-dark">
+              <Link href="/programs/flic" className="btn-primary text-lg px-8 py-4 bg-primary hover:bg-green-600 transition-colors">
                 Explore Programs
               </Link>
-              <Link href="/get-involved" className="btn-secondary text-lg px-8 py-4">
+              <Link href="/get-involved" className="btn-secondary text-lg px-8 py-4 hover:bg-green-50 hover:text-primary transition-colors">
                 Join Our Mission
               </Link>
             </motion.div>
